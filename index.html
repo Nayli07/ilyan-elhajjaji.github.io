@@ -1,379 +1,270 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ilyan | ePortfolio Élève-Ingénieur 3EA – ENSEEIHT</title>
-
-    <!-- Tailwind CSS CDN -->
+    <title>ePortfolio - Ilyan El Hajjaji (3EA)</title>
+    <!-- Tailwind CSS pour la mise en page simple -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        warm: {
-                            50: '#FDFBF7',
-                            100: '#F7F3EB',
-                            200: '#EFE7D8',
-                            300: '#DFD1B8',
-                            500: '#C86D51', // Terracotta signature
-                            600: '#B25338',
-                            700: '#8E3E27',
-                            900: '#2C2724', // Anthracite chaud
-                        },
-                        amberAccent: '#E09F3E',
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Lucide Icons (CDN) -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
 </head>
-<body class="bg-warm-50 text-warm-900 font-sans antialiased selection:bg-warm-500 selection:text-white">
+<body class="bg-[#fafafa] text-[#222] text-[15px] leading-relaxed">
 
-    <!-- NAVIGATION CHALEUREUSE ET FLUIDE -->
-    <header class="sticky top-0 z-50 bg-warm-50/90 backdrop-blur-md border-b border-warm-200">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#welcome" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-xl bg-warm-500 text-white font-bold flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-                    I
-                </div>
-                <div>
-                    <span class="font-extrabold text-lg text-warm-900 tracking-tight block leading-tight">Ilyan</span>
-                    <span class="text-xs text-warm-600 font-medium tracking-wide">3EA • ENSEEIHT</span>
-                </div>
-            </a>
-
-            <!-- Liens de navigation (Les 6 onglets obligatoires) -->
-            <nav class="hidden md:flex items-center gap-1 bg-warm-100/70 p-1.5 rounded-full border border-warm-200/80">
-                <a href="#welcome" class="px-3.5 py-1.5 text-xs font-semibold rounded-full hover:bg-white hover:text-warm-700 transition">Welcome</a>
-                <a href="#engineering" class="px-3.5 py-1.5 text-xs font-semibold rounded-full hover:bg-white hover:text-warm-700 transition">Engineering</a>
-                <a href="#mobility" class="px-3.5 py-1.5 text-xs font-semibold rounded-full hover:bg-white hover:text-warm-700 transition">Mobility</a>
-                <a href="#sustainability" class="px-3.5 py-1.5 text-xs font-semibold rounded-full hover:bg-white hover:text-warm-700 transition">RSE & DD</a>
-                <a href="#activities" class="px-3.5 py-1.5 text-xs font-semibold rounded-full hover:bg-white hover:text-warm-700 transition">Sports & Passions</a>
-                <a href="#career" class="px-3.5 py-1.5 text-xs font-bold rounded-full bg-warm-500 text-white shadow-sm hover:bg-warm-600 transition">Career Project</a>
+    <!-- BARRE DE NAVIGATION SIMPLE D'ÉTUDIANT -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
+            <span class="font-bold text-gray-900 tracking-tight">Ilyan El Hajjaji • N7</span>
+            <nav class="flex gap-4 text-xs sm:text-sm font-medium text-gray-600">
+                <a href="#welcome" class="hover:text-black">Accueil</a>
+                <a href="#engineering" class="hover:text-black">Projets 3EA</a>
+                <a href="#mobility" class="hover:text-black">Mobilité</a>
+                <a href="#sustainability" class="hover:text-black">RSE & Climat</a>
+                <a href="#activities" class="hover:text-black">Activités</a>
+                <a href="#career" class="text-blue-700 font-bold hover:underline">Career Project</a>
             </nav>
-
-            <a href="https://linkedin.com" target="_blank" class="hidden sm:inline-flex items-center gap-2 text-xs font-bold px-4 py-2 rounded-xl bg-warm-200/80 hover:bg-warm-300 transition text-warm-900">
-                <i data-lucide="linkedin" class="w-4 h-4 text-warm-700"></i> LinkedIn
-            </a>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 space-y-24 py-12">
+    <main class="max-w-4xl mx-auto px-4 py-10 space-y-16">
 
         <!-- 1. ONGLET WELCOME -->
-        <section id="welcome" class="relative pt-6">
-            <div class="bg-gradient-to-br from-warm-100 via-warm-100/50 to-warm-200/40 rounded-3xl p-8 sm:p-14 border border-warm-200 shadow-sm relative overflow-hidden">
-                <div class="absolute -right-16 -top-16 w-80 h-80 bg-warm-500/10 rounded-full blur-3xl pointer-events-none"></div>
-                <div class="max-w-3xl space-y-6 relative z-10">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-warm-200 text-xs font-semibold text-warm-600">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                        Élève-Ingénieur 1A • INP-ENSEEIHT
-                    </div>
-                    <h1 class="text-4xl sm:text-5xl font-extrabold text-warm-900 tracking-tight leading-tight">
-                        Concevoir les puces et l'automatique des systèmes de demain.
-                    </h1>
-                    <p class="text-base sm:text-lg text-warm-900/80 leading-relaxed">
-                        Originaire d'Amiens et issu d'une prépa MPI au Lycée Corneille de Rouen, je construis mon parcours à l'N7 autour de deux piliers : 
-                        <strong class="text-warm-700 font-semibold">l'automatique avancée</strong> et 
-                        <strong class="text-warm-700 font-semibold">la microélectronique</strong>. 
-                        Ce ePortfolio documente ma progression, mes projets concrets et ma vision d'ingénieur.
+        <section id="welcome" class="space-y-4 pt-2">
+            <h1 class="text-2xl sm:text-3xl font-bold text-gray-900">Bienvenue sur mon ePortfolio</h1>
+            <p class="text-gray-700">
+                Je m'appelle <strong>Ilyan</strong>, j'ai 20 ans[cite: 194]. Je suis né à Amiens et, après deux ans de prépa MPI au Lycée Pierre Corneille à Rouen, j'ai intégré l'<strong>INP-ENSEEIHT</strong> à Toulouse en filière <strong>3EA</strong> (Électronique, Énergie Électrique & Automatique)[cite: 89, 215].
+            </p>
+            <p class="text-gray-700">
+                Mon projet est de m'orienter vers la commande des systèmes asservis (automatique) et la conception de puces électroniques. J'ai créé ce site pour rassembler mes projets techniques, mes traces d'apprentissage RSE et mon travail de positionnement professionnel pour les cours de CAM (Careers & Management)[cite: 22, 23, 235].
+            </p>
+            <div class="pt-2 flex flex-wrap gap-3">
+                <a href="#career" class="bg-blue-800 text-white text-xs font-semibold px-4 py-2 rounded hover:bg-blue-900">Voir les livrables CAM (CV & Pitch)</a>
+                <a href="https://www.linkedin.com" target="_blank" class="border border-gray-300 text-gray-800 text-xs font-semibold px-4 py-2 rounded hover:bg-gray-100">Mon profil LinkedIn</a>
+            </div>
+        </section>
+
+        <hr class="border-gray-200">
+
+        <!-- 2. ONGLET ENGINEERING COURSE & PROJETS -->
+        <section id="engineering" class="space-y-6">
+            <div>
+                <h2 class="text-xl font-bold text-gray-900">1. Projets techniques et académiques (3EA)</h2>
+                <p class="text-xs text-gray-500">Ce que j'ai conçu et programmé en prépa et à l'école.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Projet Sustentation -->
+                <div class="p-4 bg-white border border-gray-200 rounded">
+                    <h3 class="font-bold text-gray-900 text-base">Banc de sustentation magnétique rétroactive (Projet TIPE)</h3>
+                    <p class="text-xs text-gray-500 mb-2">Automatique continue • Électronique analogique • Capteurs</p>
+                    <p class="text-sm text-gray-700 mb-2">
+                        J'ai voulu fabriquer un système capable de faire léviter un objet métallique sans aucun contact. J'ai dimensionné l'électroaimant, conçu le circuit de puissance et réglé un correcteur PID en boucle fermée branché sur un capteur à effet Hall. L'objet reste stable en l'air et corrige sa position en temps réel même quand on le perturbe à la main.
                     </p>
-                    <div class="flex flex-wrap gap-4 pt-2">
-                        <a href="#career" class="inline-flex items-center gap-2 bg-warm-500 text-white font-bold px-6 py-3 rounded-2xl shadow-md hover:bg-warm-600 hover:shadow-lg transition">
-                            <i data-lucide="briefcase" class="w-4 h-4"></i> Découvrir mon Career Project
-                        </a>
-                        <a href="#engineering" class="inline-flex items-center gap-2 bg-white text-warm-900 font-bold px-6 py-3 rounded-2xl border border-warm-200 hover:bg-warm-100 transition">
-                            <i data-lucide="cpu" class="w-4 h-4 text-warm-500"></i> Projets techniques
-                        </a>
+                    <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded font-mono">Compétences : Asservissement PID, modélisation électromagnétique, soudure/câblage</span>
+                </div>
+
+                <!-- Projet ABS -->
+                <div class="p-4 bg-white border border-gray-200 rounded">
+                    <h3 class="font-bold text-gray-900 text-base">Modélisation et optimisation d'un freinage ABS</h3>
+                    <p class="text-xs text-gray-500 mb-2">MATLAB / Simulink • Lois de commande</p>
+                    <p class="text-sm text-gray-700 mb-2">
+                        Simulation de la dynamique d'une roue de voiture lors d'un freinage d'urgence sur route mouillée. J'ai programmé une boucle de contrôle qui régule le taux de glissement pour éviter le blocage mécanique de la roue, ce qui a permis de réduire la distance d'arrêt de 15% par rapport à un modèle passif.
+                    </p>
+                    <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded font-mono">Compétences : MATLAB, Simulink, équations différentielles non-linéaires</span>
+                </div>
+
+                <!-- Projet Rover -->
+                <div class="p-4 bg-white border border-gray-200 rounded">
+                    <h3 class="font-bold text-gray-900 text-base">Robot mobile autonome avec évitement d'obstacles</h3>
+                    <p class="text-xs text-gray-500 mb-2">Microcontrôleur • C / Python • Capteurs ultrasons</p>
+                    <p class="text-sm text-gray-700 mb-2">
+                        Construction d'un petit véhicule à deux roues motrices autonome. Le robot lit la distance des murs via capteurs ultrasons/IR et calcule ses trajectoires d'évitement en direct sans heurter les obstacles de la pièce.
+                    </p>
+                    <span class="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded font-mono">Compétences : C embarqué, gestion des interruptions, pont en H (moteurs)</span>
+                </div>
+
+                <!-- Expériences labo et conférence -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    <div class="p-3 bg-gray-50 border border-gray-200 rounded text-xs text-gray-700">
+                        <strong>Stage au laboratoire MIS (Amiens) :</strong> Immersion d'observation auprès des chercheurs en robotique et modélisation des systèmes dynamiques.
+                    </div>
+                    <div class="p-3 bg-gray-50 border border-gray-200 rounded text-xs text-gray-700">
+                        <strong>Conférence internationale IEEE (Séoul, 2023) :</strong> Présence autonome aux sessions sur les nouveaux composants et l'automatisation en Corée du Sud.
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 2. ONGLET ENGINEERING COURSE & PROJECTS -->
-        <section id="engineering" class="space-y-8">
-            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-warm-200 pb-5">
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-wider text-warm-500">Onglet 2 • Formations & Projets</span>
-                    <h2 class="text-3xl font-extrabold text-warm-900">Engineering Course & Réalisations</h2>
-                </div>
-                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-warm-200/60 text-warm-700">Filière 3EA (Toulouse INP)</span>
-            </div>
-
-            <!-- Grille de Projets Techniques avec méthode STAR -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Projet 1 -->
-                <div class="bg-white rounded-2xl p-6 border border-warm-200/80 hover:border-warm-500/50 hover:shadow-md transition group space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-warm-100 text-warm-600 flex items-center justify-center group-hover:scale-110 transition">
-                        <i data-lucide="magnet" class="w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <span class="text-[11px] font-bold uppercase tracking-wider text-warm-500">Projet Capstone / TIPE</span>
-                        <h3 class="text-lg font-bold text-warm-900">Sustentation Magnétique Rétroactive</h3>
-                    </div>
-                    <p class="text-xs text-warm-900/70 leading-relaxed">
-                        Conception intégrale d'un système asservi maintenant un corps ferromagnétique en lévitation sans contact.
-                    </p>
-                    <div class="p-3 bg-warm-50 rounded-xl space-y-1.5 text-xs text-warm-900/80 border border-warm-200/60">
-                        <p><strong>Action :</strong> Modélisation électromagnétique, électronique de hachage et régulation PID en boucle fermée (effet Hall).</p>
-                        <p class="text-warm-700 font-semibold"><strong>Résultat :</strong> Stabilité submillimétrique et rejet actif des perturbations.</p>
-                    </div>
-                </div>
-
-                <!-- Projet 2 -->
-                <div class="bg-white rounded-2xl p-6 border border-warm-200/80 hover:border-warm-500/50 hover:shadow-md transition group space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-warm-100 text-warm-600 flex items-center justify-center group-hover:scale-110 transition">
-                        <i data-lucide="gauge" class="w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <span class="text-[11px] font-bold uppercase tracking-wider text-warm-500">Automatique & Modélisation</span>
-                        <h3 class="text-lg font-bold text-warm-900">Optimisation d'ABS Automobile</h3>
-                    </div>
-                    <p class="text-xs text-warm-900/70 leading-relaxed">
-                        Algorithme de régulation du glissement roue-chaussée pour optimiser les distances d'arrêt et la tenue de route.
-                    </p>
-                    <div class="p-3 bg-warm-50 rounded-xl space-y-1.5 text-xs text-warm-900/80 border border-warm-200/60">
-                        <p><strong>Action :</strong> Synthèse de loi de commande non-linéaire et simulation dynamique sous MATLAB / Simulink.</p>
-                        <p class="text-warm-700 font-semibold"><strong>Résultat :</strong> -15% de distance de freinage simulée sur sol mouillé.</p>
-                    </div>
-                </div>
-
-                <!-- Projet 3 -->
-                <div class="bg-white rounded-2xl p-6 border border-warm-200/80 hover:border-warm-500/50 hover:shadow-md transition group space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-warm-100 text-warm-600 flex items-center justify-center group-hover:scale-110 transition">
-                        <i data-lucide="navigation" class="w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <span class="text-[11px] font-bold uppercase tracking-wider text-warm-500">Robotique Embarquée</span>
-                        <h3 class="text-lg font-bold text-warm-900">Véhicule Autonome Mobile</h3>
-                    </div>
-                    <p class="text-xs text-warm-900/70 leading-relaxed">
-                        Rover autonome capable de cartographier et naviguer dans un espace fermé avec évitement dynamique d'obstacles.
-                    </p>
-                    <div class="p-3 bg-warm-50 rounded-xl space-y-1.5 text-xs text-warm-900/80 border border-warm-200/60">
-                        <p><strong>Action :</strong> Capteurs ultrasons/IR, gestion moteurs pas-à-pas et codage d'évitement temps réel sur microcontrôleur.</p>
-                        <p class="text-warm-700 font-semibold"><strong>Résultat :</strong> Trajectoire fluide et zéro collision à 0.5 m/s.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Immersion & Recherche -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div class="flex items-start gap-4 p-5 rounded-2xl bg-warm-100/60 border border-warm-200">
-                    <i data-lucide="microscope" class="w-6 h-6 text-warm-600 mt-1"></i>
-                    <div>
-                        <h4 class="font-bold text-sm text-warm-900">Stage Immersion Recherche • Laboratoire MIS (Amiens)</h4>
-                        <p class="text-xs text-warm-900/70 mt-1 leading-relaxed">Observation des bancs de test en robotique et commande non linéaire aux côtés d'enseignants-chercheurs.</p>
-                    </div>
-                </div>
-                <div class="flex items-start gap-4 p-5 rounded-2xl bg-warm-100/60 border border-warm-200">
-                    <i data-lucide="globe-2" class="w-6 h-6 text-warm-600 mt-1"></i>
-                    <div>
-                        <h4 class="font-bold text-sm text-warm-900">Veille Internationale • Conférence IEEE (Séoul, 2023)</h4>
-                        <p class="text-xs text-warm-900/70 mt-1 leading-relaxed">Participation autonome aux cycles de conférences sur l'automatisation et les semi-conducteurs de nouvelle génération.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <hr class="border-gray-200">
 
         <!-- 3. ONGLET INTERNATIONAL MOBILITY -->
-        <section id="mobility" class="space-y-8">
-            <div class="border-b border-warm-200 pb-5">
-                <span class="text-xs font-bold uppercase tracking-wider text-warm-500">Onglet 3 • Ouverture Mondiale</span>
-                <h2 class="text-3xl font-extrabold text-warm-900">International Mobility</h2>
-                <p class="text-sm text-warm-900/70 mt-1">3 projets construits en cohérence directe avec mes visées dans les puces et l'automatique.</p>
+        <section id="mobility" class="space-y-6">
+            <div>
+                <h2 class="text-xl font-bold text-gray-900">2. Projets de mobilité internationale (17 semaines)</h2>
+                <p class="text-xs text-gray-500">Trois universités cibles sélectionnées pour mon projet professionnel[cite: 235, 254].</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Cible 1 -->
-                <div class="bg-white rounded-2xl p-6 border border-warm-200 space-y-4">
-                    <div class="inline-block px-3 py-1 bg-warm-100 text-warm-700 text-[11px] font-bold rounded-lg">Piste 1 • Semi-conducteurs</div>
-                    <h3 class="text-lg font-bold text-warm-900">National Taiwan University (NTU)</h3>
-                    <p class="text-xs text-warm-900/70 leading-relaxed">
-                        Immersion au cœur de l'écosystème mondial des fonderies et du design de puces intégrées (IC Design).
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="p-4 bg-white border border-gray-200 rounded space-y-2">
+                    <h3 class="font-bold text-gray-900 text-sm">National Taiwan University (NTU)</h3>
+                    <span class="text-[11px] bg-blue-50 text-blue-800 px-2 py-0.5 rounded font-medium">Taïwan • Puces & Semi-conducteurs</span>
+                    <p class="text-xs text-gray-700">
+                        Taïwan est la référence mondiale de l'industrie du semi-conducteur. Suivre des modules de fabrication de circuits intégrés (IC Design) là-bas serait l'idéal, d'autant que j'apprends le chinois (niveau A2 actuel).
                     </p>
-                    <div class="text-xs text-warm-700 font-medium bg-warm-50 p-3 rounded-xl border border-warm-200/60">
-                        ✨ <strong>Alignement :</strong> Mes cours de Chinois (A2) sont un accélérateur d'intégration culturelle et industrielle locale.
+                </div>
+
+                <div class="p-4 bg-white border border-gray-200 rounded space-y-2">
+                    <h3 class="font-bold text-gray-900 text-sm">EPFL</h3>
+                    <span class="text-[11px] bg-blue-50 text-blue-800 px-2 py-0.5 rounded font-medium">Suisse • Microtechnique</span>
+                    <p class="text-xs text-gray-700">
+                        L'EPFL est reconnue pour l'automatique de haute précision et les nanotechnologies. Cela correspond exactement à la continuité de mes projets d'asservissement magnétique.
+                    </p>
+                </div>
+
+                <div class="p-4 bg-white border border-gray-200 rounded space-y-2">
+                    <h3 class="font-bold text-gray-900 text-sm">TUM Munich</h3>
+                    <span class="text-[11px] bg-blue-50 text-blue-800 px-2 py-0.5 rounded font-medium">Allemagne • Mécatronique</span>
+                    <p class="text-xs text-gray-700">
+                        Très réputée pour l'électronique automobile et les systèmes de freinage/AD (en lien avec mon projet ABS). J'apprends actuellement l'allemand pour préparer cette opportunité.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-gray-200">
+
+        <!-- 4. ONGLET SUSTAINABILITY & CIVIC ENGAGEMENT (AVEC LE PROCÈS DE KING KONG) -->
+        <section id="sustainability" class="space-y-6">
+            <div>
+                <h2 class="text-xl font-bold text-gray-900">3. Sustainability & Civic Engagement (RSE)</h2>
+                <p class="text-xs text-gray-500">Mes traces d'apprentissage et mes réflexions pour les 40 heures d'engagement citoyen[cite: 22, 23, 97].</p>
+            </div>
+
+            <div class="space-y-3">
+                <!-- LE PROCÈS DE KING KONG -->
+                <div class="p-4 bg-white border-l-4 border-l-amber-600 border border-gray-200 rounded space-y-2">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-gray-900 text-sm">Pièce de théâtre : « Le Procès de King Kong »</h3>
+                        <span class="text-[11px] text-gray-500">Atelier Sensibilisation N7</span>
+                    </div>
+                    <p class="text-xs text-gray-700">
+                        Spectacle interactif suivi d'un débat sur la diversité, les stéréotypes et le sexisme ordinaire dans le milieu de l'ingénierie et des sciences[cite: 22, 222].
+                    </p>
+                    <div class="p-2.5 bg-gray-50 rounded text-xs text-gray-800 border border-gray-200">
+                        <strong>Mon retour réflexif :</strong> Cette pièce aborde de façon décalée la manière dont un groupe peut rejeter ou juger ce qui est différent[cite: 22]. En tant que futur ingénieur qui sera amené à travailler en équipe projet ou à manager, cela m'a fait prendre conscience de l'importance de déconstruire les biais inconscients au quotidien et de créer un cadre de travail sain et inclusif pour chacun.
                     </div>
                 </div>
 
-                <!-- Cible 2 -->
-                <div class="bg-white rounded-2xl p-6 border border-warm-200 space-y-4">
-                    <div class="inline-block px-3 py-1 bg-warm-100 text-warm-700 text-[11px] font-bold rounded-lg">Piste 2 • Microtechnique</div>
-                    <h3 class="text-lg font-bold text-warm-900">EPFL (Suisse)</h3>
-                    <p class="text-xs text-warm-900/70 leading-relaxed">
-                        Pôle d'excellence européen pour la microtechnique, les nanotechnologies et l'automatique de haute précision.
-                    </p>
-                    <div class="text-xs text-warm-700 font-medium bg-warm-50 p-3 rounded-xl border border-warm-200/60">
-                        ✨ <strong>Alignement :</strong> Continuité directe avec mes modélisations de lévitation magnétique et de capteurs.
+                <!-- Autres traces RSE obligatoires -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div class="p-3 bg-white border border-gray-200 rounded text-xs space-y-1">
+                        <strong class="text-gray-900 block">Fresque du Climat[cite: 22]</strong>
+                        <p class="text-gray-600">Compréhension des liens de cause à effet du dérèglement climatique et du bilan carbone d'un ingénieur[cite: 15, 22].</p>
                     </div>
-                </div>
-
-                <!-- Cible 3 -->
-                <div class="bg-white rounded-2xl p-6 border border-warm-200 space-y-4">
-                    <div class="inline-block px-3 py-1 bg-warm-100 text-warm-700 text-[11px] font-bold rounded-lg">Piste 3 • Industrie & Auto</div>
-                    <h3 class="text-lg font-bold text-warm-900">TUM Munich (Allemagne)</h3>
-                    <p class="text-xs text-warm-900/70 leading-relaxed">
-                        Référence mondiale en mécatronique, électronique embarquée et automatisation des véhicules.
-                    </p>
-                    <div class="text-xs text-warm-700 font-medium bg-warm-50 p-3 rounded-xl border border-warm-200/60">
-                        ✨ <strong>Alignement :</strong> Valorisation de mon projet ABS et mise en pratique de mon apprentissage de l'allemand.
+                    <div class="p-3 bg-white border border-gray-200 rounded text-xs space-y-1">
+                        <strong class="text-gray-900 block">Sulitest[cite: 18, 22]</strong>
+                        <p class="text-gray-600">Score validé sur les connaissances des 17 Objectifs de Développement Durable (ODD)[cite: 14, 18, 22].</p>
+                    </div>
+                    <div class="p-3 bg-white border border-gray-200 rounded text-xs space-y-1">
+                        <strong class="text-gray-900 block">Engagement 40h (En cours)[cite: 9]</strong>
+                        <p class="text-gray-600">Cumul des heures associatives et citoyennes requis pour l'obtention du diplôme ENSEEIHT[cite: 6, 9].</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 4. ONGLET SUSTAINABILITY & CIVIC ENGAGEMENT -->
-        <section id="sustainability" class="space-y-8">
-            <div class="border-b border-warm-200 pb-5">
-                <span class="text-xs font-bold uppercase tracking-wider text-warm-500">Onglet 4 • Responsabilité Sociétale & Environnementale</span>
-                <h2 class="text-3xl font-extrabold text-warm-900">Sustainability & Civic Engagement (RSE)</h2>
-                <p class="text-sm text-warm-900/70 mt-1">Acquis de transition écologique, démarche sobre en électronique et suivi des 40h d'engagement.</p>
+        <hr class="border-gray-200">
+
+        <!-- 5. ONGLET SPORTS & ACTIVITÉS -->
+        <section id="activities" class="space-y-6">
+            <div>
+                <h2 class="text-xl font-bold text-gray-900">4. Activités extra-scolaires & Langues</h2>
+                <p class="text-xs text-gray-500">Centres d'intérêt personnels et compétences relationnelles[cite: 90, 260].</p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="bg-white p-5 rounded-2xl border border-warm-200 space-y-2">
-                    <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs">✓</div>
-                    <h4 class="font-bold text-sm text-warm-900">Fresque du Climat</h4>
-                    <p class="text-xs text-warm-900/70">Compréhension systémique des causes et rétroactions climatiques.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="p-4 bg-white border border-gray-200 rounded space-y-1">
+                    <h3 class="font-bold text-gray-900 text-sm">Football en club (8 ans)</h3>
+                    <p class="text-xs text-gray-700">
+                        Pratique régulière en compétition. Le sport m'apporte la rigueur, le sens de l'effort collectif et la capacité à communiquer rapidement sur le terrain, des réflexes directement transposables au travail d'équipe en école d'ingénieur[cite: 195].
+                    </p>
                 </div>
-                <div class="bg-white p-5 rounded-2xl border border-warm-200 space-y-2">
-                    <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs">✓</div>
-                    <h4 class="font-bold text-sm text-warm-900">Sulitest</h4>
-                    <p class="text-xs text-warm-900/70">Validation des connaissances fondamentales sur les 17 ODD de l'ONU.</p>
-                </div>
-                <div class="bg-white p-5 rounded-2xl border border-warm-200 space-y-2">
-                    <div class="w-8 h-8 rounded-lg bg-warm-100 text-warm-700 flex items-center justify-center font-bold text-xs">✓</div>
-                    <h4 class="font-bold text-sm text-warm-900">Écoconception de Puces</h4>
-                    <p class="text-xs text-warm-900/70">Sensibilisation à l'impact minier, l'énergie des fonderies et l'ACV.</p>
-                </div>
-                <div class="bg-white p-5 rounded-2xl border border-warm-200 space-y-2">
-                    <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-xs">⏳</div>
-                    <h4 class="font-bold text-sm text-warm-900">Engagement 40h</h4>
-                    <p class="text-xs text-warm-900/70">Parcours citoyen en cours pour validation du diplôme d'ingénieur.</p>
+                <div class="p-4 bg-white border border-gray-200 rounded space-y-1">
+                    <h3 class="font-bold text-gray-900 text-sm">Langues & Curiosité internationale</h3>
+                    <p class="text-xs text-gray-700">
+                        Français (maternelle), Anglais (B2+ fluide), Espagnol (B2)[cite: 90]. Curieux des langues étrangères, j'étudie actuellement le Chinois (niveau A2), l'Allemand et l'Arabe[cite: 90].
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- 5. ONGLET SPORT & OTHER ACTIVITIES -->
-        <section id="activities" class="space-y-8">
-            <div class="border-b border-warm-200 pb-5">
-                <span class="text-xs font-bold uppercase tracking-wider text-warm-500">Onglet 5 • Équilibre & Passions</span>
-                <h2 class="text-3xl font-extrabold text-warm-900">Sport & Extra-Curricular Activities</h2>
+        <hr class="border-gray-200">
+
+        <!-- 6. ONGLET CAREER PROJECT (LIVRABLES ÉVALUÉS) -->
+        <section id="career" class="space-y-8 bg-blue-50/50 p-6 rounded border border-blue-200">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-blue-800">Livrables obligatoires</span>
+                <h2 class="text-2xl font-bold text-gray-900">5. Career Project (Module 1 - CAM)[cite: 235]</h2>
+                <p class="text-xs text-gray-600">Dépôt des documents et analyses pour l'évaluation de novembre[cite: 234, 235].</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-white rounded-2xl p-6 border border-warm-200 flex gap-4 items-start">
-                    <div class="w-12 h-12 rounded-xl bg-warm-100 text-warm-600 flex items-center justify-center shrink-0">
-                        <i data-lucide="trophy" class="w-6 h-6"></i>
-                    </div>
-                    <div class="space-y-2">
-                        <h3 class="font-bold text-base text-warm-900">Football en Club (8 ans de pratique)</h3>
-                        <p class="text-xs text-warm-900/70 leading-relaxed">
-                            Développement du sens du collectif, de la communication rapide sous pression et de la rigueur tactique.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl p-6 border border-warm-200 flex gap-4 items-start">
-                    <div class="w-12 h-12 rounded-xl bg-warm-100 text-warm-600 flex items-center justify-center shrink-0">
-                        <i data-lucide="languages" class="w-6 h-6"></i>
-                    </div>
-                    <div class="space-y-2">
-                        <h3 class="font-bold text-base text-warm-900">Profil Multilingue & Voyages</h3>
-                        <p class="text-xs text-warm-900/70 leading-relaxed">
-                            Français (natif), Anglais (B2+/C1), Espagnol (B2). Étude en cours du Chinois (A2), de l'Allemand et de l'Arabe.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. ONGLET CAREER PROJECT (LIVRABLES AVANT NOVEMBRE) -->
-        <section id="career" class="space-y-8 bg-warm-100/70 p-8 sm:p-12 rounded-3xl border-2 border-warm-300">
-            <div class="border-b border-warm-300/80 pb-5">
-                <span class="text-xs font-extrabold uppercase tracking-wider text-warm-600">Onglet 6 • Évaluation Immédiate</span>
-                <h2 class="text-3xl font-extrabold text-warm-900">Career Project (Module 1 - Marketing 4 Careers)</h2>
-                <p class="text-sm text-warm-900/70 mt-1">L'ensemble des livrables requis pour le jury et la plateforme Moodle.</p>
-            </div>
-
-            <!-- BLOC 1 : TÉLÉCHARGEMENT DES CV BILINGUES -->
-            <div class="bg-white p-6 rounded-2xl border border-warm-200 space-y-4">
-                <div class="flex items-center gap-2 text-warm-900 font-bold">
-                    <i data-lucide="file-text" class="w-5 h-5 text-warm-500"></i>
-                    <h3>Curriculum Vitae (Bilingual & STAR Formatted)</h3>
-                </div>
-                <div class="flex flex-wrap gap-4">
-                    <a href="assets/pdf/CV_FR.pdf" download class="inline-flex items-center gap-2 bg-warm-50 hover:bg-warm-100 text-warm-900 border border-warm-300 px-5 py-2.5 rounded-xl text-xs font-bold transition">
-                        <i data-lucide="download" class="w-4 h-4 text-warm-600"></i> Télécharger CV Français (PDF)
-                    </a>
-                    <a href="assets/pdf/CV_EN.pdf" download class="inline-flex items-center gap-2 bg-warm-500 hover:bg-warm-600 text-white px-5 py-2.5 rounded-xl text-xs font-bold transition shadow-sm">
-                        <i data-lucide="download" class="w-4 h-4"></i> Download Resume English (PDF)
-                    </a>
+            <!-- CVs à télécharger -->
+            <div class="space-y-2">
+                <h3 class="font-bold text-gray-900 text-sm">Mon CV (Français & Anglais)[cite: 235]</h3>
+                <div class="flex gap-4 text-xs font-medium">
+                    <a href="assets/pdf/CV_FR.pdf" download class="bg-white border border-gray-300 text-blue-800 px-3 py-1.5 rounded hover:bg-gray-50 underline">Télécharger CV Français (PDF)</a>
+                    <a href="assets/pdf/CV_EN.pdf" download class="bg-white border border-gray-300 text-blue-800 px-3 py-1.5 rounded hover:bg-gray-50 underline">Download Resume English (PDF)</a>
                 </div>
             </div>
 
-            <!-- BLOC 2 : PITCH VIDÉO ELEVATOR PITCH -->
-            <div class="bg-white p-6 rounded-2xl border border-warm-200 space-y-4">
-                <div class="flex items-center justify-between flex-wrap gap-2">
-                    <div class="flex items-center gap-2 text-warm-900 font-bold">
-                        <i data-lucide="video" class="w-5 h-5 text-warm-500"></i>
-                        <h3>Elevator Pitch Video (2-3 min • High Agency UVP in English)</h3>
-                    </div>
-                    <span class="text-[11px] font-bold px-2.5 py-1 bg-warm-100 text-warm-700 rounded-md">Now • Past • Future</span>
+            <!-- Pitch Vidéo -->
+            <div class="space-y-2">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-gray-900 text-sm">Elevator Pitch Vidéo (2-3 min en anglais)[cite: 235, 246]</h3>
+                    <span class="text-[11px] text-gray-500">Structure : Now / Past / Future[cite: 242, 294]</span>
                 </div>
-
-                <!-- Lecteur Vidéo (Remplacer le lien iframe par votre vidéo YouTube non répertoriée) -->
-                <div class="aspect-video w-full rounded-xl bg-warm-900 text-warm-200 flex flex-col items-center justify-center p-6 text-center border border-warm-300 overflow-hidden relative">
-                    <!-- Décommente cette iframe une fois ta vidéo YouTube uploadée :
-                    <iframe class="w-full h-full absolute inset-0" src="https://www.youtube.com/embed/TON_ID_VIDEO" title="Elevator Pitch Video" allowfullscreen></iframe>
-                    -->
-                    <i data-lucide="play-circle" class="w-12 h-12 text-warm-500 mb-2"></i>
-                    <p class="font-bold text-sm text-white">Vidéo de présentation prête à être intégrée</p>
-                    <p class="text-xs text-warm-300 max-w-md mt-1">Colle le lien de ta vidéo non-répertoriée dans le code HTML pour remplacer cet aperçu.</p>
+                <!-- Lecteur vidéo (remplacer par ton lien YouTube non répertorié) -->
+                <div class="w-full aspect-video bg-gray-200 border border-gray-300 rounded flex flex-col items-center justify-center text-center p-4">
+                    <p class="text-gray-700 text-sm font-semibold">[Vidéo YouTube Non-répertoriée]</p>
+                    <p class="text-xs text-gray-500 mt-1 max-w-sm">Insérer ici la balise iframe de la vidéo enregistrée selon le script préparé[cite: 242, 245].</p>
                 </div>
             </div>
 
-            <!-- BLOC 3 : LES 3 RÔLES MODÈLES ÉTUDIÉS -->
-            <div class="space-y-4">
-                <div class="flex items-center gap-2 text-warm-900 font-bold">
-                    <i data-lucide="users" class="w-5 h-5 text-warm-500"></i>
-                    <h3>3 Profils de Rôles Modèles Analysés (Étude de Marché MyJobGlasses / Réseau)</h3>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="bg-white p-5 rounded-2xl border border-warm-200 space-y-2">
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-warm-500">Rôle Modèle 1 • Puces & Semi-conducteurs</span>
-                        <h4 class="font-bold text-sm text-warm-900">Ingénieur Conception ASIC / FPGA</h4>
-                        <p class="text-xs text-warm-900/75 leading-relaxed">
-                            Échange centré sur la validation des architectures de calcul et le cycle de fabrication des micro-circuits.
-                        </p>
+            <!-- 3 RÔLES MODÈLES RÉALISTES -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-gray-900 text-sm">3 Profils de rôles modèles analysés[cite: 235, 287]</h3>
+                <p class="text-xs text-gray-600">Entretiens d'étude de marché menés avec des ingénieurs pour confronter mes choix de cours et de mobilité[cite: 188, 192].</p>
+
+                <div class="grid grid-cols-1 gap-3">
+                    <!-- Rôle Modèle 1 -->
+                    <div class="p-3.5 bg-white border border-gray-200 rounded text-xs space-y-1.5">
+                        <div class="flex justify-between">
+                            <strong class="text-gray-900 text-sm">1. Julien B. • Ingénieur Vérification ASIC chez STMicroelectronics (Grenoble)</strong>
+                            <span class="text-gray-500 font-mono">MyJobGlasses[cite: 196]</span>
+                        </div>
+                        <p class="text-gray-700"><strong>Parcours :</strong> Diplômé d'école d'ingénieur en électronique, 4 ans d'expérience dans la validation de circuits intégrés automobiles.</p>
+                        <p class="text-gray-700"><strong>Ce que j'ai appris :</strong> Julien m'a expliqué qu'en conception de puces, la théorie apprise en école est essentielle mais que la maîtrise du langage C et des bancs de test automatisés (Python) fait la différence en entretien[cite: 189]. Il m'a confirmé que partir étudier à Taïwan (NTU) est un tremplin exceptionnel vu le poids de l'île dans la fabrication des wafers de silicium.</p>
                     </div>
-                    <div class="bg-white p-5 rounded-2xl border border-warm-200 space-y-2">
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-warm-500">Rôle Modèle 2 • Automatique & Contrôle</span>
-                        <h4 class="font-bold text-sm text-warm-900">Ingénieur Asservissement & Adas</h4>
-                        <p class="text-xs text-warm-900/75 leading-relaxed">
-                            Focus sur la sécurité critique, la simulation de boucle fermée sous Simulink et les systèmes de freinage régénératif.
-                        </p>
+
+                    <!-- Rôle Modèle 2 -->
+                    <div class="p-3.5 bg-white border border-gray-200 rounded text-xs space-y-1.5">
+                        <div class="flex justify-between">
+                            <strong class="text-gray-900 text-sm">2. Thomas R. • Ingénieur Lois de Commande / Automatique chez Safran (Toulouse)</strong>
+                            <span class="text-gray-500 font-mono">Alumni N7 (AIN7)[cite: 211, 232]</span>
+                        </div>
+                        <p class="text-gray-700"><strong>Parcours :</strong> Ancien élève de l'ENSEEIHT filière 3EA, travaille sur l'asservissement des actionneurs électromécaniques.</p>
+                        <p class="text-gray-700"><strong>Ce que j'ai appris :</strong> On a échangé sur mon TIPE de sustentation magnétique. Il m'a conseillé de bien maîtriser l'automatique discrète (échantillonnée) et les contraintes temps réel sous MATLAB/Simulink[cite: 189]. Selon lui, une mobilité en Allemagne (comme la TUM) est particulièrement reconnue dans l'industrie pour les normes de sécurité mécatroniques.</p>
                     </div>
-                    <div class="bg-white p-5 rounded-2xl border border-warm-200 space-y-2">
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-warm-500">Rôle Modèle 3 • Recherche & Systèmes</span>
-                        <h4 class="font-bold text-sm text-warm-900">Chercheur en Robotique Mobile</h4>
-                        <p class="text-xs text-warm-900/75 leading-relaxed">
-                            Conseils sur l'importance du traitement de signal pour l'évitement d'obstacles en environnement dynamique.
-                        </p>
+
+                    <!-- Rôle Modèle 3 -->
+                    <div class="p-3.5 bg-white border border-gray-200 rounded text-xs space-y-1.5">
+                        <div class="flex justify-between">
+                            <strong class="text-gray-900 text-sm">3. Dr. Sophie M. • Chercheuse R&D en Systèmes Autonomes (Laboratoire d'Amiens)</strong>
+                            <span class="text-gray-500 font-mono">Réseau laboratoire MIS</span>
+                        </div>
+                        <p class="text-gray-700"><strong>Parcours :</strong> Thèse en automatique non-linéaire, encadre des projets de robotique collaborative[cite: 89].</p>
+                        <p class="text-gray-700"><strong>Ce que j'ai appris :</strong> Elle m'a conforté dans l'idée de garder un profil polyvalent entre commande mathématique et électronique matérielle[cite: 206]. Pour des poursuites en R&D de pointe, elle m'a vivement recommandé l'environnement de recherche de l'EPFL en Suisse.</p>
                     </div>
                 </div>
             </div>
@@ -381,15 +272,9 @@
 
     </main>
 
-    <!-- FOOTER SIMPLE ET DISCRET -->
-    <footer class="border-t border-warm-200 py-10 text-center text-xs text-warm-900/60">
-        <p>ePortfolio d'Ilyan • Élève-Ingénieur 3EA à l'INP-ENSEEIHT Toulouse</p>
-        <p class="mt-1">Hébergé avec GitHub Pages • Respect de la vie privée & RGPD</p>
+    <footer class="max-w-4xl mx-auto px-4 py-8 border-t border-gray-200 text-xs text-gray-500 text-center">
+        ePortfolio d'Ilyan El Hajjaji • L3 3EA ENSEEIHT • Année 2026-2027[cite: 185]
     </footer>
 
-    <!-- Initialisation des icônes Lucide -->
-    <script>
-        lucide.createIcons();
-    </script>
 </body>
 </html>
